@@ -9,10 +9,14 @@
 *.user
 *.userosscache
 *.sln.docstates
+wwwroot/
+lib/
+Chart.js/
+ApiStorage.cs
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-ApiStorage.cs
 
 # Mono auto generated files
 mono_crash.*
