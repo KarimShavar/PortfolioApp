@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using PortfolioApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PortfolioApp.Controllers.Weather;
 
 namespace PortfolioApp
 {
@@ -41,6 +42,9 @@ namespace PortfolioApp
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddTransient<WeatherCall>();
+            services.AddTransient<IWeatherService, WeatherService>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

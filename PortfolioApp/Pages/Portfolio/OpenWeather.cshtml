@@ -1,0 +1,62 @@
+﻿@page
+@model PortfolioApp.Pages.Portfolio.OpenWeatherModel
+@{
+    ViewData["Title"] = "OpenWeather";
+}
+
+<h1>OpenWeather API Tech Test</h1>
+
+<div>
+    <p>Implemented in Asp Net Core a tech test ment for Angular.</p>
+    <p>Instructions:</p>
+    <ul>
+        <li>Create a new angular project</li>
+       <li>Use the open weather API to retrieve weather information on at least 10 cities</li>
+       <li>Populate a table within the app with this data</li>
+       <li>Introduce configurable pagination</li>
+       <li>Introduce sortable columns</li>
+       <li>Introduce a filter for searching by city name</li>
+       <li>Write unit test</li>
+       <li>Create a graph that displays the median average global temperature and plot cities available in the API above/below the median</li>
+       <li>Try to use semantic and accessible HTML with SCSS or LESS</li>
+    </ul>
+</div>
+
+
+<div>
+    <table class="display" id="table_id">
+        <thead>
+        <tr>
+        <th>City</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Pressure</th>
+        <th>Description</th>
+        </thead>
+        <tbody>
+        @foreach (var weather in Model.Weathers)
+        {
+            <tr>
+                <td>
+                    @weather.City
+                </td>
+                <td>@weather.Temperature &#8451</td>
+                <td>@weather.Humidity %</td>
+                <td>@weather.Pressure mb</td>
+                <td>@weather.Description</td>
+            </tr>
+        }
+        </tbody>
+    </table></div>
+
+<div>
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+@{ var chart = Model.TempChart(); }
+
+@section Scripts {
+    <script>
+        @Html.Raw(chart.CreateChartCode("myChart"));
+    </script>
+}

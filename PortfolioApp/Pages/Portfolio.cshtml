@@ -1,0 +1,34 @@
+﻿@page
+@model PortfolioApp.Pages.PortfolioModel
+@using ChartJSCore.Models
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<h1>Portfolio</h1>
+<div class="row h-100">
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="~/assets/craig-whitehead-495277-unsplash.jpg" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a asp-page="/Portfolio/OpenWeather">OpenWeather API Tech Test</a>
+                </h4>
+                <p class="card-text">Tech test from my mentor ment for Angular role.
+                    Made from specification using Asp Net Core and some JS.
+                    I'm very happy with how clean the architecture turned out in the end.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">Project Two</a>
+                </h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit aliquam aperiam nulla perferendis dolor nobis numquam, rem expedita, aliquid optio, alias illum eaque. Non magni, voluptates quae, necessitatibus unde temporibus.</p>
+            </div>
+        </div>
+    </div>
+</div>
