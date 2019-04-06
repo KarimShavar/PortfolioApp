@@ -1,57 +1,77 @@
 ﻿@page
 @model PortfolioApp.Pages.Portfolio.OpenWeatherModel
 @{
-    ViewData["Title"] = "OpenWeather";
+    ViewData["Title"] = "Tech Test";
+    ViewData["BackgroundImage"] = "/assets/weather.jpg";
+    ViewData["Description"] = "Using OpenWeather API";
 }
 
-<h1>OpenWeather API Tech Test</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h2 class="section-heading">Weather Tech Test</h2>
+            <hr />
 
-<div>
-    <p>Implemented in Asp Net Core a tech test ment for Angular.</p>
-    <p>Instructions:</p>
-    <ul>
-        <li>Create a new angular project</li>
-       <li>Use the open weather API to retrieve weather information on at least 10 cities</li>
-       <li>Populate a table within the app with this data</li>
-       <li>Introduce configurable pagination</li>
-       <li>Introduce sortable columns</li>
-       <li>Introduce a filter for searching by city name</li>
-       <li>Write unit test</li>
-       <li>Create a graph that displays the median average global temperature and plot cities available in the API above/below the median</li>
-       <li>Try to use semantic and accessible HTML with SCSS or LESS</li>
-    </ul>
+            <p>
+                This project is based on a angular tech test.<br/> I Decided to implement this using Asp .Net Core<br />Here are the instructions:</p>
+            <ul>
+                <li>Create a new project</li>
+                <li>Use the open weather API to retrieve weather information on at least 10 cities</li>
+                <li>Populate a table within the app with this data</li>
+                <li>Introduce configurable pagination</li>
+                <li>Introduce sortable columns</li>
+                <li>Introduce a filter for searching by city name</li>
+                <li>Write unit test</li>
+                <li>Create a graph that displays the median average global temperature and plot cities available in the API above/below the median</li>
+                <li>Try to use semantic and accessible HTML with SCSS or LESS</li>
+            </ul>
+            <hr/>
+            <a href="https://github.com/KarimShavar/WeatherAPI-Tech-Test">
+                <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span><h4 class="d-inline">Source Code</h4>
+            </a>
+        </div>
+    </div>
 </div>
+<hr style="padding-bottom: 30px;" />
 
 
 <div>
     <table class="display" id="table_id">
         <thead>
-        <tr>
-        <th>City</th>
-        <th>Temperature</th>
-        <th>Humidity</th>
-        <th>Pressure</th>
-        <th>Description</th>
+            <tr>
+                <th>City</th>
+                <th>Temperature</th>
+                <th>Humidity</th>
+                <th>Pressure</th>
+                <th>Description</th>
         </thead>
         <tbody>
-        @foreach (var weather in Model.Weathers)
-        {
-            <tr>
-                <td>
-                    @weather.City
-                </td>
-                <td>@weather.Temperature &#8451</td>
-                <td>@weather.Humidity %</td>
-                <td>@weather.Pressure mb</td>
-                <td>@weather.Description</td>
-            </tr>
-        }
+            @foreach (var weather in Model.Weathers)
+            {
+                <tr>
+                    <td>
+                        @weather.City
+                    </td>
+                    <td>@weather.Temperature &#8451</td>
+                    <td>@weather.Humidity %</td>
+                    <td>@weather.Pressure mb</td>
+                    <td>@weather.Description</td>
+                </tr>
+            }
         </tbody>
-    </table></div>
+    </table>
+</div>
+
+<hr />
 
 <div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="myChart" width="400" height="250"></canvas>
 </div>
+
+<hr />
 
 @{ var chart = Model.TempChart(); }
 

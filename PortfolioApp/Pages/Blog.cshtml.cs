@@ -9,6 +9,8 @@ namespace PortfolioApp.Pages
 {
     public class BlogModel : PageModel
     {
+        public string BackgroundImage = @"assets/boxed-water-is-better-1464044-unsplash.jpg";
+
         public void OnGet()
         {
 

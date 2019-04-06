@@ -9,8 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-wwwroot/
-lib/
+.wwwroot/lib/
 Chart.js/
 ApiStorage.cs
 

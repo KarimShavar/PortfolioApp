@@ -1,0 +1,54 @@
+﻿@page
+@model PortfolioApp.Pages.Portfolio.BookKeepModel
+@{
+    ViewData["Title"] = "BookKeep";
+    ViewData["BackgroundImage"] = "/assets/bookkeep.jpg";
+    ViewData["Description"] = "WPF to track your library";
+}
+
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+                <h2 class="section-heading">The WPF book library</h2>
+
+                <p>
+                    WPF application to keep track of books user has read as well as a wishlist and search functionality.
+
+                    App makes use of , and its main features are based on it GoodreadsApi together with Goodreads .NET API Client Library.
+
+                    <p>Built with:</p>
+                    <ul>
+                        <li>
+                            GoodreadsApi - www.goodreads.com
+                        </li>
+                        <li>
+                            MahApps.Metro - https://github.com/MahApps/MahApps.Metro/
+                        </li>
+                        <li>
+                            Goodreads .NET API Client Library - by Adam Krogh
+                        </li>
+                    </ul>
+                </p>
+
+                <a href="#">
+                    <img class="img-fluid" src="~/assets/bk1.png" alt="">
+                </a>
+                <span class="caption text-muted">Search www.goodreads.com whole library!</span>
+
+                <a href="#">
+                    <img class="img-fluid" src="~/assets/bk2.png" alt="">
+                </a>
+                <span class="caption text-muted">Be sure to check the source code.</span>
+            </div>
+        </div>
+    </div>
+</article>
+<hr/>
+<a href="https://github.com/KarimShavar/WeatherAPI-Tech-Test">
+    <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span><h4 class="d-inline">Source Code</h4>
+</a>

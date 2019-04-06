@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace PortfolioApp.Pages
+namespace PortfolioApp.Pages.Portfolio
 {
-    public class IndexModel : PageModel
+    public class BookKeepModel : PageModel
     {
         public void OnGet()
         {
+
         }
     }
 }

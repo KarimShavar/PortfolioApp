@@ -1,10 +1,25 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Hi!";
+    ViewData["BackgroundImage"] = "assets/welcome.jpg";
+    ViewData["Description"] = "";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="card mb-1" style="max-width: 1600px;">
+    <div class="row no-gutters">
+        <div class="col-lg-8">
+            <div class="card-body">
+                <h1 class="card-title">My name is Adam Ciszewski</h1>
+                <h5 class="card-subtitle">An aspiring software developer</h5>
+                <p class="card-text">I am a self-motivated, creative individual with great passion for programming.<br /> My top skills are knowledge of C#.Net including ASP.Net Core, WPF, EF and writing clean, testable code. Currently expanding my knowledge of front–end development with  Angular 2, JavaScript, HTML5 and CSS. I have strong interpersonal skills and I am eager to be challenged in order to grow and improve my skills as software developer. Have a look in portfolio section of my website for my recent projects. You can also find me on social media found below.</p>
+                <form method="get" action="~/assets/cv.pdf">
+                    <button class="btn btn-primary" type="submit">Download Resume</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <img src="~/assets/prof.jpg" class="card-img" alt="...">
+        </div>    
+    </div>
 </div>
