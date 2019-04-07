@@ -46,7 +46,7 @@ namespace PortfolioApp
 
             services.AddTransient<WeatherCall>();
             services.AddTransient<IWeatherService, WeatherService>();
-            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
+            services.AddTransient<IFeedbackRepository, FakeFeedbackRepository>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

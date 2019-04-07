@@ -68,7 +68,6 @@
         </div>
     </header>
     <div class="container">
-        <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -132,7 +131,8 @@
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"
                 asp-fallback-src="~/lib/datatables/js/jquery.dataTables.js">
         </script>
-        <script src="https://cdnjs.com/libraries/Chart.js"
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
+                type="text/javascript"
                 asp-fallback-src="~/Chart.js/Chart.bundle.js">
         </script>
     </environment>

@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Hello";
-    ViewData["BackgroundImage"] = "assets/images/header/water.jpg";
+    ViewData["BackgroundImage"] = "assets/images/header/desk.jpg";
     ViewData["Description"] = "";
 }
 
@@ -12,16 +12,24 @@
             <div class="card-body">
                 <h1 class="card-title">My name is Adam Ciszewski</h1>
                 <h5 class="card-subtitle">An aspiring software developer</h5>
-                <p class="card-text">I am a self-motivated, creative individual with great passion for programming. 
-                    <p class="card-text">My top skills are knowledge of C#.Net including ASP.Net Core, WPF, EF and writing clean, testable code. Currently expanding my knowledge of front–end development with  Angular 2, JavaScript, HTML5 and CSS. I have strong interpersonal skills and I am eager to be challenged in order to grow and improve my skills as software developer.</p>
-                <p class="card-text">Have a look in the portfolio section of my website and check my recent projects. You can also find me on social media found below. Just click icons in footer.</p>
-                <form method="get" action="~/assets/cv.pdf">
-                    <button class="btn btn-primary" type="submit" formtarget="_blank">Download Resume</button>
-                </form>
+                <p class="card-text">I am a self-motivated, creative individual with great passion for programming.
+                <p class="card-text">My top skills are knowledge of C#.Net including ASP.Net Core, WPF, EF and writing clean, testable code. Currently expanding my knowledge of front–end development with  Angular 2, JavaScript, HTML5 and CSS. I have strong interpersonal skills and I am eager to be challenged in order to grow and improve my skills as software developer.</p>
+                <p class="card-text">Have a look in the portfolio section of my website and check my recent projects. Pluralsight is my most used platform for learning, I completed close to 40 courses there. Have a look on my profile there for my Skill IQ on paths like .Net Core, Data Modeling etc. You can also find me on social media found below. Just click icons in footer.</p>
+                <div class="btn-group">
+                    <form method="get" action="~/assets/cv.pdf">
+                        <button class="btn btn-primary" type="submit" formtarget="_blank">Download Resume</button>
+                    </form>
+                </div>
+                <div class="btn-group">
+
+                    <form action="https://app.pluralsight.com/profile/adam-ciszewski-23">
+                        <button class="btn btn-primary" type="submit" formtarget="_blank">Pluralsight</button>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="col-lg-4 ">
             <img src="~/assets/images/profile.jpg" class="card-img" alt="...">
-        </div>    
+        </div>
     </div>
 </div>

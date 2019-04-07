@@ -11,16 +11,19 @@ namespace PortfolioApp.Models
         [Key]
         public int FeedbackId { get; set; }
         [Required]
-        [MinLength(2)]
+        [StringLength(20, MinimumLength = 3)]
         public string Name { get; set; }
+
         [Required]
-        [MinLength(2)]
+        [StringLength(50, MinimumLength = 3)]
         public string LastName { get; set; }
+
         [Required]
-        [EmailAddress]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
         [Required]
-        [MinLength(10)]
+        [StringLength(2000, MinimumLength = 20)]
         public string Message { get; set; }
     }
 }
