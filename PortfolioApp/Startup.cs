@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using PortfolioApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PortfolioApp.Controllers.Feedback;
 using PortfolioApp.Controllers.Weather;
 
 namespace PortfolioApp
@@ -45,6 +46,7 @@ namespace PortfolioApp
 
             services.AddTransient<WeatherCall>();
             services.AddTransient<IWeatherService, WeatherService>();
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

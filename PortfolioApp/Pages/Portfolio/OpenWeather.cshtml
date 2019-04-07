@@ -2,39 +2,38 @@
 @model PortfolioApp.Pages.Portfolio.OpenWeatherModel
 @{
     ViewData["Title"] = "Tech Test";
-    ViewData["BackgroundImage"] = "/assets/weather.jpg";
+    ViewData["BackgroundImage"] = "/assets/images/header/weather.jpg";
     ViewData["Description"] = "Using OpenWeather API";
 }
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <h2 class="section-heading">Weather Tech Test</h2>
-            <hr />
+<hr />
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h2>Weather Tech Test</h2>
 
-            <p>
-                This project is based on a angular tech test.<br/> I Decided to implement this using Asp .Net Core<br />Here are the instructions:</p>
-            <ul>
-                <li>Create a new project</li>
-                <li>Use the open weather API to retrieve weather information on at least 10 cities</li>
-                <li>Populate a table within the app with this data</li>
-                <li>Introduce configurable pagination</li>
-                <li>Introduce sortable columns</li>
-                <li>Introduce a filter for searching by city name</li>
-                <li>Write unit test</li>
-                <li>Create a graph that displays the median average global temperature and plot cities available in the API above/below the median</li>
-                <li>Try to use semantic and accessible HTML with SCSS or LESS</li>
-            </ul>
-            <hr/>
-            <a href="https://github.com/KarimShavar/WeatherAPI-Tech-Test">
-                <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span><h4 class="d-inline">Source Code</h4>
-            </a>
+                <p>
+                    This project is based on a angular tech test. I Decided to implement this using Asp .Net Core.
+                    It connects to openweathermap.org API and gets current weather information based on geolocation and then displays information in a user friendly way.
+                    <br />Here are the instructions:
+                </p>
+                <ul>
+                    <li>Create a new project</li>
+                    <li>Use the open weather API to retrieve weather information on at least 10 cities</li>
+                    <li>Populate a table within the app with this data</li>
+                    <li>Introduce configurable pagination</li>
+                    <li>Introduce sortable columns</li>
+                    <li>Introduce a filter for searching by city name</li>
+                    <li>Create a graph that displays the median average global temperature and plot cities available in the API above/below the median</li>
+                    <li>Try to use semantic and accessible HTML with SCSS or LESS</li>
+                    <li>Write unit test</li>
+                </ul>
+                <p>Check the source code on <a href="https://github.com/KarimShavar/WeatherAPI-Tech-Test">github.</a></p>
+            </div>
         </div>
     </div>
-</div>
+</article>
 <hr style="padding-bottom: 30px;" />
 
 
@@ -64,12 +63,15 @@
         </tbody>
     </table>
 </div>
+<span class="caption text-muted">This is current data for a large part of UK.</span>
 
 <hr />
 
 <div>
     <canvas id="myChart" width="400" height="250"></canvas>
 </div>
+<span class="caption text-muted">Chart actually includes all entries from table.</span>
+
 
 <hr />
 

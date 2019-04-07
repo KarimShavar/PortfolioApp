@@ -1,49 +1,49 @@
 ﻿@page
 @model PortfolioApp.Pages.PortfolioModel
-@using ChartJSCore.Models
 @{
     ViewData["Title"] = "Portfolio";
-    ViewData["BackgroundImage"] = "assets/boats.jpg";
+    ViewData["BackgroundImage"] = "assets/images/header/boats.jpg";
     ViewData["Description"] = "Have a look at my projects";
 }
 
-<h1>Portfolio</h1>
+<hr/>
 <div class="row h-100">
     <div class="col-lg-6 mb-4">
         <div class="card h-100">
-            <a asp-page="/Portfolio/OpenWeather"><img class="card-img-top" src="~/assets/snow.jpg" alt=""></a>
+            <a asp-page="/Portfolio/OpenWeather">
+                <img class="card-img-top" src="~/assets/images/portfolio/snow.jpg" alt="Snowy weather">
+            </a>
             <div class="card-body">
                 <h4 class="card-title">
                     <a asp-page="/Portfolio/OpenWeather">OpenWeather API Tech Test</a>
                 </h4>
-                <p class="card-text">Tech test from my mentor ment for Angular role.
-                    Made from specification using Asp Net Core and some JS.
-                    I'm very happy with how clean the architecture turned out in the end.</p>
-                <a href="https://github.com/KarimShavar/WeatherAPI-Tech-Test">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span><h6 class="d-inline">Source Code</h6>
-                </a>
+                <hr/>
+                <p class="card-text">
+                    This application was a Tech test. It was meant as a test for angular position.
+                    I made it from "client" specification that you can see on project page.
+                    I'm very happy with how clean the architecture turned out in the end. Judge yourself.
+                </p>
             </div>
         </div>
     </div>
     <div class="col-lg-6 mb-4">
         <div class="card h-100">
-            <a asp-page="/Portfolio/BookKeep"><img class="card-img-top" src="~/assets/books.jpg" alt=""></a>
+            <a asp-page="/Portfolio/BookKeep">
+                <img class="card-img-top" src="~/assets/images/portfolio/books.jpg" alt="Book collection">
+            </a>
             <div class="card-body">
                 <h4 class="card-title">
-                    <a asp-page="/Portfolio/BookKeep">Book Keep</a>
+                    <a asp-page="/Portfolio/BookKeep">BookKeep</a>
                 </h4>
-                <p class="card-text">Fully functioning WPF application to keep track of your library. Add, remove books from your library or wishlist. Make use of www.goodreads.com whole library.</p>
-                <a href="https://github.com/KarimShavar/BookKeep">
-                    <span class="fa-stack fa-lg">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span><h6 class="d-inline">Source Code</h6>
-                </a>
+                <hr/>
+                <p class="card-text">Fully functioning WPF application to keep track of your book library. Add, remove books from your library or wishlist. Make use of www.goodreads.com whole library.</p>
             </div>
         </div>
     </div>
 </div>
-<hr />
+<div class="row h-100">
+    <div class="col-md-8">
+        <h4>You can find source code for this website here: <a class="active" href="https://github.com/KarimShavar/PortfolioApp">GitHub</a></h4>
+    </div>
+</div>
+    <hr />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PortfolioApp.Models;
 
 namespace PortfolioApp.Data
 {
@@ -12,5 +13,7 @@ namespace PortfolioApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Contact> Contacts { get; set; }
     }
 }

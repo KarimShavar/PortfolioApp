@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/bootstrap-social/bootstrap-social.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/all.css">
-
         <link rel="stylesheet" href="~/lib/datatables/css/jquery.dataTables.css" />
     </environment>
     <environment exclude="Development">
@@ -17,7 +16,13 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+              asp-fallback-href="~/lib/font-awesome/css/all.css"
+              integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"
+              asp-fallback-href="~/lib/datatables/css/jquery.dataTables.css">
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
 
@@ -28,20 +33,13 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" asp-page="/Index">Adam Ciszewski</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
-                </button>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" asp-page="/Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-page="/Blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-page="/Resume">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-page="/Portfolio">Portfolio</a>
@@ -69,14 +67,12 @@
             </div>
         </div>
     </header>
-
     <div class="container">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
 <!-- Footer -->
 <footer>
     <div class="container">
@@ -108,6 +104,7 @@
                         </a>
                     </li>
                 </ul>
+                <span class="caption text-muted">Website based of <a href="https://startbootstrap.com/">Start Bootstrap theme</a></span>
             </div>
         </div>
     </div>
@@ -131,6 +128,12 @@
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                 crossorigin="anonymous"
                 integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"
+                asp-fallback-src="~/lib/datatables/js/jquery.dataTables.js">
+        </script>
+        <script src="https://cdnjs.com/libraries/Chart.js"
+                asp-fallback-src="~/Chart.js/Chart.bundle.js">
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>

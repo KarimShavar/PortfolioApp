@@ -4,6 +4,12 @@ for details on configuring this project to bundle and minify static web assets. 
     padding-right: 20px;
 }
 
+.card-img {
+}
+.card-text {
+    text-align: justify;
+    text-justify: distribute;
+}
 .card-subtitle {
     font-weight: bolder;
 }
@@ -15,7 +21,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     font-size: 20px;
     color: #212529;
-    font-family: 'Lora', 'Times New Roman', serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 p {
@@ -34,7 +40,7 @@ h4,
 h5,
 h6 {
     font-weight: 800;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 a {
@@ -117,7 +123,7 @@ body {
         font-weight: 800;
         padding: 13px;
         text-transform: uppercase;
-        color: #343a40;
+        color: #2e2e2e;
     }
 
     #mainNav .navbar-nav > li.nav-item > a {
@@ -125,6 +131,7 @@ body {
         font-weight: 800;
         letter-spacing: 1px;
         text-transform: uppercase;
+        color: #343a40;
     }
 
 @media only screen and (min-width: 992px) {
@@ -427,14 +434,12 @@ footer {
 }
 
 .btn-primary {
-    background-color: #0085A1;
-    border-color: #0085A1;
+    background-color: #2e2e2e;
 }
 
     .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
         color: #fff;
         background-color: #00657b !important;
-        border-color: #00657b !important;
     }
 
 .btn-lg {

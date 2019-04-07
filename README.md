@@ -11,10 +11,9 @@ Asp .Net Core, front using bootstrap 4, font-awesome and whatever might be neede
 
 * Landing page with main information display and “download resume”.
 * Linkedin, Twitter, GitHub icons for quick nav.
-* Display images bookkeep project.
+* Display bookkeep project.
 * A openWeatherAPI page with specification and project.
-* Have a blog page.
-* A easy to use contact form.
+* A easy to use contact form - just to db.
 
 ## Nice to have:
 

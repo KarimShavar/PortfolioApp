@@ -25,7 +25,7 @@ namespace PortfolioApp.Controllers.Weather
                 {
                     client.BaseAddress = new Uri("http://api.openweathermap.org");
                     var response = await client.GetAsync(
-                        $"/data/2.5/box/city?bbox=16,51,22,54,10&appid={ApiStorage.OWeatherApiKey}&units=metric");
+                        $"/data/2.5/box/city?bbox=-5,52,2,50,10&appid={ApiStorage.OWeatherApiKey}&units=metric");
                     response.EnsureSuccessStatusCode();
 
                     var stringResult = await response.Content.ReadAsStringAsync();
