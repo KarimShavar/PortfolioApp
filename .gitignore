@@ -12,7 +12,11 @@
 
 lib/
 Chart.js/
+
+# Sensitive
+Storage/
 ApiStorage.cs
+PassStorage.cs
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
